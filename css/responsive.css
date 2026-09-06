@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Responsive Breakpoints for Mobile & Tablet Devices
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heatmap-grid, .mandi-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .commodity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .app-sidebar {
+    transform: translateX(-100%);
+    width: var(--sidebar-width) !important;
+  }
+
+  .app-sidebar.sidebar-mobile-open {
+    transform: translateX(0);
+  }
+
+  .app-main {
+    margin-left: 0 !important;
+  }
+
+  .settings-grid, .queue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-right {
+    gap: 8px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .heatmap-grid, .mandi-cards-grid, .commodity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-topbar {
+    padding: 0 14px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lang-selector-wrap {
+    padding: 2px 6px;
+  }
+}

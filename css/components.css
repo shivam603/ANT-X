@@ -1,0 +1,393 @@
+/* ==========================================================================
+   Reusable UI Components: Buttons, Inputs, Tables, Tickets, Heatmaps & Forms
+   Phase 2 Stepper, AI Recommendation & Modal Receipts
+   Phase 3 Floating Bhashini Voice Assistant & Fraud Satellite Audit Rows
+   Phase 4 HITL System Learning Feed, Congestion Markers & CSV Exports
+   ========================================================================== */
+
+/* Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-forest) 0%, var(--primary-emerald) 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-emerald) 0%, var(--primary-accent) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(27, 67, 50, 0.35);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: var(--slate-dark);
+  border-color: var(--slate-border);
+}
+
+.btn-outline:hover {
+  background: #f8fafc;
+  border-color: var(--slate-muted);
+}
+
+.btn-subtle {
+  background: #f1f5f9;
+  color: var(--slate-navy);
+}
+
+.btn-subtle:hover {
+  background: #e2e8f0;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.btn-sm { padding: 6px 14px; font-size: 0.8rem; }
+.btn-xs { padding: 4px 10px; font-size: 0.75rem; }
+.btn-lg { padding: 14px 28px; font-size: 1rem; }
+.btn-block { width: 100%; }
+
+/* Form Controls */
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--slate-dark);
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid var(--slate-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--slate-dark);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--primary-emerald);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+}
+
+/* Data Table System */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 14px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.data-table th {
+  padding: 12px 16px;
+  background: #f8fafc;
+  color: var(--slate-muted);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--slate-border);
+}
+
+.data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: var(--slate-dark);
+}
+
+.data-table tr:hover {
+  background: #f8fafc;
+}
+
+.highlight-fraud-row {
+  background: #fef2f2 !important;
+  border-left: 4px solid #ef4444;
+}
+
+/* Status Pill */
+.status-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.status-optimal, .status-checked-in, .status-weighed { background: #d1fae5; color: #065f46; }
+.status-moderate, .status-in-queue { background: #fef3c7; color: #92400e; }
+.status-congested, .status-delayed { background: #fee2e2; color: #991b1b; }
+
+/* ==========================================================================
+   PHASE 4: HEATMAPS CONGESTION MARKERS & HITL SYSTEM LEARNING FEED
+   ========================================================================== */
+
+.heatmap-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.bg-green { background: #10b981; }
+.bg-yellow { background: #f59e0b; }
+.bg-red { background: #ef4444; }
+
+.mandi-heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.heatmap-mandi-card {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--slate-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.marker-border-green { border-top: 4px solid #10b981; }
+.marker-border-yellow { border-top: 4px solid #f59e0b; }
+.marker-border-red { border-top: 4px solid #ef4444; }
+
+.heatmap-mandi-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heatmap-marker-pin {
+  font-size: 14px;
+}
+
+.marker-pin-green { color: #10b981; }
+.marker-pin-yellow { color: #f59e0b; }
+.marker-pin-red { color: #ef4444; }
+
+.heatmap-mandi-name {
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.heatmap-mandi-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--slate-muted);
+}
+
+/* HITL Analytics Grid Layout */
+.hitl-analytics-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+}
+
+.hitl-feed-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.hitl-log-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 380px;
+  overflow-y: auto;
+  margin-top: 14px;
+}
+
+.hitl-log-item {
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid var(--slate-border);
+  border-left: 4px solid #3b82f6;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hitl-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hitl-badge-ai {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  background: #dbeafe;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.hitl-timestamp {
+  font-size: 0.74rem;
+  color: var(--slate-muted);
+}
+
+.hitl-admin-info {
+  font-size: 0.85rem;
+  color: var(--slate-dark);
+}
+
+.hitl-action-text {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--slate-navy);
+}
+
+.hitl-system-msg {
+  font-size: 0.8rem;
+  background: #ecfeff;
+  color: #0891b2;
+  border: 1px solid #cff4fc;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.hitl-log-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.hitl-score-badge {
+  color: #059669;
+  font-weight: 700;
+}
+
+.hitl-mandi-tag {
+  color: var(--slate-muted);
+}
+
+/* State Progress Mini List */
+.state-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.state-mini-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.state-mini-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.86rem;
+}
+
+.state-mini-sub {
+  font-size: 0.74rem;
+  color: var(--slate-muted);
+  text-align: right;
+}
+
+/* Bhashini AI Floating Widget */
+.bhashini-widget-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 3000;
+}
+
+.bhashini-floating-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border: 2px solid #38bdf8;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+}
+
+.font-mono { font-family: var(--font-mono); }
+.font-bold { font-weight: 700; }
+.margin-top-lg { margin-top: 24px; }
+.margin-bottom-lg { margin-bottom: 24px; }
+.text-danger { color: #dc2626; }
+.text-amber { color: #d97706; }
+.text-teal { color: #0d9488; }
